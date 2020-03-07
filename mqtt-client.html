@@ -5,17 +5,17 @@
 </head>
 <script>
     let options = {
-    host: 'localhost',
-    port: 8081,
-    protocol: 'ws'
+        host: 'localhost',
+        port: 8081,
+        protocol: 'ws'
     };
     let client = mqtt.connect(options)
-    client.on('connect', () => {
-    console.log('connected');
+        client.on('connect', () => {
+        console.log('connected');
     });
     client.subscribe("test_topic");
     client.on('message', function (topic, payload) {
-    console.log([topic, payload].join(": "))
+        console.log([topic, payload].join(": "))
     });
     client.publish("test_topic", "hello world!")
 </script>
