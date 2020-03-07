@@ -5,11 +5,13 @@
 </head>
 <script>
     let options = {
+        //paikallinen toiminta
         //host: 'localhost',
-        host: 'mqtt-broker-tt.herokuapp.com',
         //port: 8081,
-        port: 443,
         //protocol: 'ws'
+        //herokun kautta, git linkitetty
+        host: 'mqtt-broker-tt.herokuapp.com',
+        port: 443,
         protocol: 'wss'
     };
     let client = mqtt.connect(options)
